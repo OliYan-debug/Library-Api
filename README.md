@@ -18,7 +18,6 @@ classDiagram
   }
 
   class Book {
-    -id: int
     -title: string
     -Author: string
     -isbn: string
