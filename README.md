@@ -2,20 +2,9 @@
 Uma api que simula um sistema de empréstimo de livros de uma livraria
 
 
-## Diagrama de Classes
+## Diagrama de Classe
 ```mermaid
 classDiagram
-  class Library {
-    -books_available: Book[]
-    -books_borrowed: Book[]
-  }
-  
-  class Client {
-    -name: string
-    -library_card: LibraryCard
-    -books_borrowed: Book[]
-    -monthly_fee: float
-  }
 
   class Book {
     -title: string
@@ -24,12 +13,4 @@ classDiagram
     -borrowed: boolean
   }
 
-  class LibraryCard {
-    -number: int
-    -active: boolean
-  }
-
-  Library "N" <-- "1" Client
-  Library "N" <-- "1" Book
-  LibraryCard "1" <-- "1" Client
 ```
