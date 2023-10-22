@@ -18,7 +18,7 @@ public record BookController (BookService bookService) {
         var books = bookService.findAll();
         return ResponseEntity.ok(books);
     }
-    @PostMapping("/book")
+    @PostMapping("/")
     @Operation(summary = "Add book to library")
     public Book add(@RequestBody Book book){
         return bookService.create(book);
